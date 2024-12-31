@@ -8,7 +8,8 @@
   <div class="wrap-horizontal">
     <%= link_to "Edit this Movie", edit_movie_path(@movie), class: "button" %>
     <%= link_to "Back to Movies", movies_path, class: "button" %>
-
-    <%= button_to "Destroy this Movie", @movie, method: :delete, class: "destroy-button" %>
   </div>
+  
+  <%= button_to "Destroy this Movie", @movie, method: :delete, class: "destroy-button" %>
+  
 </div>
