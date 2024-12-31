@@ -9,8 +9,90 @@
  * Consider organizing styles into separate files for maintainability.
  */
 
+.wrap {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 
- table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-  }
+.wrap h1 {
+  margin-bottom: 60px;
+  font-size: 50px;
+  color: #483248;
+}
+
+.wrap-horizontal {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    font-size: 20px;
+}
+
+.show-font {
+    font-size: 30px;
+}
+
+table, th, td {
+  border: 1px solid #483248;
+  border-collapse: collapse;
+  padding: 5px;
+  text-align: center;
+}
+
+thead {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  background-color: #AA98A9;
+}
+
+tbody, tfoot {
+  font-size: 20px;
+  color: #483248;
+}
+
+.text-look {
+    text-decoration: none;
+    color: #483248;
+}
+
+.text-look:hover {
+    text-decoration: underline;
+    color: #AA98A9;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #483248;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  border: none;
+}
+
+.destroy-button {
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.button:hover {
+  background-color: #AA98A9;
+}
+
+.destroy-button:hover {
+    background-color: #AA98A9;
+}
+
+form {
+  padding: 20px;
+  border-radius: 8px;
+  gap: 5px;
+  margin-bottom: 15px;
+  font-size: 20px;
+}

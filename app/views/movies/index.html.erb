@@ -1,27 +1,40 @@
-<h1>Movies List</h1>
 
-<table style="width:100%">
-  <thead>
-    <tr>
-      <th style="width:50%">Title</th>
-      <th style="width:25%">Rating</th>
-      <th style="width:25%">Release Date</th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @movies.each do |movie| %>
-      <tr>
-        <td><%= movie.title %></td>
-        <td><%= movie.rating %></td>
-        <td><%= movie.release_date %></td>
+<div class="wrap">
+  <h1>Movies List</h1>
+
+  <div class="wrap">
+  </div>
+  <table style="width:80%">
+    <thead>
+      <tr style="height:40px">
+        <th style="width:40%">Title</th>
+        <th style="width:25%">Rating</th>
+        <th style="width:35%">Release Date</th>
       </tr>
-    <% end %>
-  </tbody>
+    </thead>
 
-  <tfoot>
-    <tr>
-      <td colspan="3">Total Movies: <%= @movies.count %></td>
-    </tr>
-  </tfoot>
-</table>
+    <tbody style="height:30px">
+      <% @movies.each do |m| %>
+        <tr>
+          <td><%= link_to m.title, m, class: "text-look" %></td>
+          <td><%= m.rating %></td>
+          <td><%= m.release_date %></td>
+        </tr>
+      <% end %>
+    </tbody>
+
+    <tfoot>
+      <tr>
+        <td colspan="3">Total Movies: <%= @movies.count %></td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <br/>
+
+  <div class="wrap-horizontal">
+    <%= link_to "New Movie", new_movie_path, class: "button"  %>
+  </div>
+</div>
+
