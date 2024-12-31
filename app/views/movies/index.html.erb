@@ -24,9 +24,9 @@
       <% end %>
     </tbody>
 
-    <tfoot>
+    <tfoot style="height:70px">
       <tr>
-        <td colspan="3">Total Movies: <%= @movies.count %></td>
+        <td colspan="3"><%= link_to "New Movie", new_movie_path, class:"button-add" %></td>
       </tr>
     </tfoot>
   </table>
@@ -34,7 +34,10 @@
   <br/>
 
   <div class="wrap-horizontal">
-    <%= link_to "New Movie", new_movie_path, class: "button"  %>
+    <%= link_to 'Sort by Title', movies_path(sort: 'title', order: sorted('title')), class: 'button' %>
+    <%= link_to 'Sort by Rating', movies_path(sort: 'rating', order: sorted('rating')), class: 'button' %>
+    <%= link_to 'Sort by Release Date', movies_path(sort: 'release_date', order: sorted('release_date')), class: 'button' %>
   </div>
+
 </div>
 

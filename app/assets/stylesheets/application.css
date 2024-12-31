@@ -71,6 +71,21 @@ tbody, tfoot {
   border: none;
 }
 
+.button-add {
+  width: 75%;
+  padding: 10px 20px;
+  background-color: #483248;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  border: none;
+}
+
+.button-add:hover {
+  background-color: #AA98A9;
+}
+
 .destroy-button {
   padding: 10px 20px;
   background-color: red;
